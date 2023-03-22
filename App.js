@@ -1,20 +1,28 @@
+import { useState, useEffect, useRef } from 'react';
+import { Text, View, Button, Platform,StyleSheet ,Image,TextInput,Pressable} from 'react-native';
+import Constants from 'expo-constants'
+import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import Login from './Screen/Login';
+import { GiftedChat } from 'react-native-gifted-chat';
+import Topnavigation from './Screen/Topnavigation';
+import Home from './Screen/Home';
+import AuthenticationProvider from './State/Authentication';
+
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+
+return <>
+<AuthenticationProvider>
+<Topnavigation/>
+</AuthenticationProvider>
+
+
+
+
+    </>
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const styled = StyleSheet.create({
+})
